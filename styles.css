@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Karma:400|Lemonada:400|Koulen:400");
+@import url("https://fonts.googleapis.com/css?family=Karma:400|Lemonada:400|Koulen:400|Playfair Display SC:400");
 
 :root {
     --font-family-lemonada: "Lemonada";
     --font-family-Koulen: "Koulen";
     --font-family-Karma: "Karma";
+    --font-family-Couture: "Couture";
+    --font-family-Couture: "MeMemphis Medium";
+    --font-family-Playfair: "Playfair Display SC";
 }
 
 *{
@@ -29,8 +32,13 @@ html,body{
 .left-side {
     width: 50%;
     height: 100%;
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
     /* float: left; */
 }
 
@@ -43,6 +51,19 @@ html,body{
     /* background-color: purple; */
     flex-direction: column;
 }
+
+.content-left{
+    width: 95%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: darkred; */
+    position: inherit;
+    border-radius: 20px;
+    
+}
+
 
 .right-side{
     width: 50%;
@@ -62,7 +83,7 @@ html,body{
 }
 
 .slogan {
-    font-family: var(--font-family-lemonada);
+    font-family: var(--font-family-Playfair);
     align-items: center;
     justify-content: center;
     display: flex;
@@ -79,7 +100,7 @@ html,body{
     padding: 0;
     margin: 0;
     line-height: 1;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 
 .dropdown{
@@ -95,12 +116,6 @@ html,body{
     flex-direction: column;
     align-items: center;
 }
-
-/* .label-perguntas{
-    border: 3px solid #000000;
-    border-radius: 10px;
-    gap: 10px;
-} */
 
 .select-option{
     border: none;
@@ -209,4 +224,45 @@ html,body{
     width: 100%;
     height: 100%;
     text-align: center;
+}
+
+.slides{
+    width: 791px;
+    height: 759px;
+    display: flex;
+    /* background-color: peru; */
+    position: relative;
+    transition: 2s;
+    /* padding-left: 20px; */
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    transition: 2s;
+    /* padding-left: 20px; */
+}
+
+.slide first{
+    /* padding-left: 20px; */
+}
+
+.slides input{
+    display: none;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -200%;
 }

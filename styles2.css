@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Karma:400|Lemonada:400|Koulen:400");
+
+
+:root {
+    --font-family-lemonada: "Lemonada";
+    --font-family-Koulen: "Koulen";
+    --font-family-Karma: "Karma";
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -26,4 +35,8 @@ html,body{
 .text{
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-family: var(--font-family-Karma);
 }
