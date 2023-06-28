@@ -43,7 +43,7 @@ html,body{
 }
 
 .content-right {
-    width: 90%;
+    width: 95%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -105,7 +105,8 @@ html,body{
 
 .dropdown{
     /* background-color: blue; */
-    width: 95%;
+    width: 100%;
+    padding: 10px;
 }
 
 .form-main {
@@ -124,9 +125,10 @@ html,body{
     padding: 10px;
     border-color: black;
     outline: none;
-    margin: 30px;
+    margin: 20px;
     font-size: 120%;
 }
+
 
 .text{
     border: none;
@@ -156,10 +158,6 @@ html,body{
     transition: transform 0.3s;
 }
 
-.dropdown{
-    padding: 20px;
-}
-
 #Descricao{
     outline: none;
     background-color: #D9D9D9;
@@ -179,6 +177,7 @@ html,body{
     line-height: 1.5;
     resize: none;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }
 
 .button{

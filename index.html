@@ -36,50 +36,50 @@
                 <div class="form-main">
                     <div class="dropdown">
                         <!-- <label for="perguntas" class="label-perguntas"></label> -->
-                        <select class="select-option">
-                            <option selected disabled value="Valor1">Pergunta1</option>
-                            <option value="Valor2" class="option-selected">Resposta1</option>
-                            <option value="Valor3" class="option-selected">Resposta2</option>
-                            <option value="Valor4" class="option-selected">Resposta3</option>
-                            <option value="Valor5" class="option-selected">Resposta4</option>
-                            <option value="Valor6" class="option-selected">Resposta5</option>
+                        <select class="select-option" id="select-option1" onchange="updateSelect1()">
+                            <option selected disabled value="Valor1">Qual o tipo de festa?</option>
+                            <option value="Valor2" class="option-selected">Aniversário</option>
+                            <option value="Valor3" class="option-selected">Casamento</option>
+                            <option value="Valor4" class="option-selected">Formatura</option>
+                            <option value="Valor5" class="option-selected">Evento Social</option>
+                            <option value="Valor6" class="option-selected">Outro</option>
                         </select>
                         <!-- <label for="perguntas" class="label-perguntas"></label> -->
-                        <select class="select-option">
-                            <option selected disabled value="Valor1">Pergunta2</option>
-                            <option value="Valor2" class="option-selected">Resposta1</option>
-                            <option value="Valor3" class="option-selected">Resposta2</option>
-                            <option value="Valor4" class="option-selected">Resposta3</option>
-                            <option value="Valor5" class="option-selected">Resposta4</option>
-                            <option value="Valor6" class="option-selected">Resposta5</option>
+                        <select class="select-option" id="select-option2" onchange="updateSelect2()">
+                            <option selected disabled value="Valor1">Para quantas pessoas?</option>
+                            <option value="Valor2" class="option-selected">Menos de 10</option>
+                            <option value="Valor3" class="option-selected">10-30</option>
+                            <option value="Valor4" class="option-selected">30-60</option>
+                            <option value="Valor5" class="option-selected">60-120</option>
+                            <option value="Valor6" class="option-selected">Acima de 120</option>
                         </select>
                         <!-- <label for="perguntas" class="label-perguntas"></label> -->
-                        <select class="select-option">
-                            <option selected disabled value="Valor1">Pergunta3</option>
-                            <option value="Valor2" class="option-selected">Resposta1</option>
-                            <option value="Valor3" class="option-selected">Resposta2</option>
-                            <option value="Valor4" class="option-selected">Resposta3</option>
-                            <option value="Valor5" class="option-selected">Resposta4</option>
-                            <option value="Valor6" class="option-selected">Resposta5</option>
+                        <select class="select-option" id="select-option3" onchange="updateSelect3()">
+                            <option selected disabled value="Valor1">Quanto tempo de evento?</option>
+                            <option value="Valor2" class="option-selected">Menos de 1 hora</option>
+                            <option value="Valor3" class="option-selected">2-5 horas</option>
+                            <option value="Valor4" class="option-selected">5-8 horas</option>
+                            <option value="Valor5" class="option-selected">8-12 horas</option>
+                            <option value="Valor6" class="option-selected">Mais de 12 horas</option>
                         </select>
-                        <select class="select-option">
+                        <!-- <select class="select-option">
                             <option selected disabled value="Valor1">Pergunta4</option>
                             <option value="Valor2" class="option-selected">Resposta1</option>
                             <option value="Valor3" class="option-selected">Resposta2</option>
                             <option value="Valor4" class="option-selected">Resposta3</option>
                             <option value="Valor5" class="option-selected">Resposta4</option>
                             <option value="Valor6" class="option-selected">Resposta5</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="text">
                         <!-- <label for="Descricao" class="label-text"></label>
                         <input type="text" id="Descricao"  placeholder="Descrição"> -->
-                        <textarea class="text-area"></textarea>
+                        <textarea class="text-area" id="text-box"></textarea>
                     </div>
                     <div class="button">
-                        <a href="DEUCERTOOBOTAO.html">
-                            <button class="enviar"><b>ENVIAR</b></button>
-                        </a>
+                        <!-- <a href="DEUCERTOOBOTAO.html"> -->
+                            <button class="enviar" onclick="getText()"><b>ENVIAR</b></button>
+                        <!-- </a> -->
                     </div>
                     <div class="contact">
                         <p class="contatos">Contatos: </p>
