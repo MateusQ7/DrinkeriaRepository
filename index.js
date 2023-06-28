@@ -1,3 +1,28 @@
+const nodemailer = require('nodemailer');
+
+async function sendEmail(){
+    //Config
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'mateusquixada2001@edu.unifor.br',
+            pass: '75953762'
+        }
+    });
+
+    //Config email
+    let mailOption = {
+        from: 'mateusquixada2001@edu.unifor.br',
+        to: 'mateusquixada@gmail.com',
+        subject: 'Teste do site',
+        text: ''
+    }
+
+    //Send email
+    let info = await transporter.sendMail(mailOption);
+    console.log("Email enviado: " + info.messageId);
+}
+
 //Slide animation
 let count = 1;
 document.getElementById("radio1").checked = true;
@@ -54,3 +79,4 @@ updateSelect1();
 updateSelect2();
 updateSelect3();
 getText();
+
