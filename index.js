@@ -45,9 +45,9 @@ function updateSelect1(){
     let optionValue = select.options[select.selectedIndex];
 
     let value = optionValue.value;
-    let text = optionValue.text;
+    let textSelect1 = optionValue.text;
 
-    console.log("Selecionado1:" + text);
+    console.log("Selecionado1:" + textSelect1);
 }
 
 function updateSelect2(){
@@ -55,9 +55,9 @@ function updateSelect2(){
     let optionValue = select.options[select.selectedIndex];
 
     let value = optionValue.value;
-    let text = optionValue.text;
+    let textSelect2 = optionValue.text;
 
-    console.log("Selecionado2:" + text);
+    console.log("Selecionado2:" + textSelect2);
 }
 
 function updateSelect3(){
@@ -65,18 +65,18 @@ function updateSelect3(){
     let optionValue = select.options[select.selectedIndex];
 
     let value = optionValue.value;
-    let text = optionValue.text;
+    let textSelect3 = optionValue.text;
 
-    console.log("Selecionado3:" + text);
+    console.log("Selecionado3:" + textSelect3);
 }
 
-function getText(){
-    let text = document.getElementById("text-box").value;
+function getTextArea(){
+    let textArea = document.getElementById("text-box").value;
 
-    console.log(text)
+    console.log(textArea)
 }
 updateSelect1();
 updateSelect2();
 updateSelect3();
-getText();
+getTextArea();
 
