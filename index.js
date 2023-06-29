@@ -75,8 +75,16 @@ function getTextArea(){
 
     console.log(textArea)
 }
+
+function getTextContact(){
+    let textContact = document.getElementById("text-contact").value;
+
+    console.log(textContact);
+}
+
 updateSelect1();
 updateSelect2();
 updateSelect3();
 getTextArea();
+getTextContact();
 
