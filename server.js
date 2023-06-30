@@ -4,30 +4,33 @@ const app = express();
 app.use(express.json())
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const SMTP_CONFIG = require("./public/smtp");
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
-async function sendEmail(){
-  //Config
-  let transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-          user: 'mateusquixada2001@edu.unifor.br',
-          pass: '75953762'
-      }
-  });
+let transporter = nodemailer.createTransport({
+  host: SMTP_CONFIG.host,
+  port: SMTP_CONFIG.port,
+  secure: false,
+  auth: {
+    user: SMTP_CONFIG.user,
+    pass: SMTP_CONFIG.pass
+  },
+  tls: {
+    rejectUnauthorized: false,
+  },
+});
 
-  //Config email
-  let mailOption = {
-      from: 'mateusquixada2001@edu.unifor.br',
+async function sendEmail(req){
+
+  let mailSent = await transporter.sendMail({
+      from: 'quixateste@gmail.com',
       to: 'mateusquixada@gmail.com',
       subject: 'Teste do site',
-      text: ''
-  }
-
-  //Send email
-  let info = await transporter.sendMail(mailOption);
-  console.log("Email enviado: " + info.messageId);
+      text: "Email recebido de drinkeriapremium.com.br\n" + "Tipo de festa: " + req.body.value1 + "\n" + "Para quantas pessoas: " + req.body.value2 + "\n"
+      + "Quanto tempo de evento: " + req.body.value3 + "\n" + "\n" + "Descrição: " + req.body.textArea + "\n" + "Contato: " + req.body.textContact
+  });
+  console.log("Email enviado: " + mailSent);
 }
 
 
@@ -47,6 +50,7 @@ app.get("/processado" , urlencodedParser, function(req, res){
 
 app.post("/enviar" , function(req, res){
   console.log(req.body);
+  sendEmail(req);
   res.sendStatus(201);
 })
 
