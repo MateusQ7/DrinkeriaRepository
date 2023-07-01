@@ -24,10 +24,10 @@ let transporter = nodemailer.createTransport({
 async function sendEmail(req){
 
   let mailSent = await transporter.sendMail({
-      from: 'quixateste@gmail.com',
+      from: 'DrinkeriaPremium',
       to: 'mateusquixada@gmail.com',
       subject: 'Teste do site',
-      text: "Email recebido de drinkeriapremium.com.br\n" + "Tipo de festa: " + req.body.value1 + "\n" + "Para quantas pessoas: " + req.body.value2 + "\n"
+      text: "Email recebido de drinkeriapremium\n" + "Tipo de festa: " + req.body.value1 + "\n" + "Para quantas pessoas: " + req.body.value2 + "\n"
       + "Quanto tempo de evento: " + req.body.value3 + "\n" + "\n" + "Descrição: " + req.body.textArea + "\n" + "Contato: " + req.body.textContact
   });
   console.log("Email enviado: " + mailSent);

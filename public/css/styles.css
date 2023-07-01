@@ -130,8 +130,6 @@ html,body{
 }
 
 
-
-
 .text{
     border: none;
     /* background-color: chocolate; */
@@ -290,3 +288,42 @@ html,body{
 #radio3:checked ~ .first{
     margin-left: -200%;
 }
+
+@media screen and (max-width: 768px) {
+    /* Estilos para telas menores que 768px */
+    .main {
+      flex-direction: column;
+    }
+    
+    .left-side, .right-side {
+      width: 100%;
+    }
+    
+    .content-right, .content-left {
+      width: 100%;
+    }
+    
+    .form-main {
+      width: 80%;
+    }
+    
+    .text, .text-contact {
+      width: 100%;
+    }
+    
+    .text-area, .text-area-contact {
+      width: 100%;
+    }
+    
+    .button {
+      width: 25%;
+    }
+    
+    .contact {
+      width: 50%;
+    }
+    
+    .slides, .slide {
+      width: 100%;
+    }
+  }
